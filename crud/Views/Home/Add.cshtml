@@ -1,0 +1,26 @@
+﻿@model crud.Models.InsertModel
+
+@*@{
+    Layout = null;
+}*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <div>
+@using(Html.BeginForm("Add","Home",FormMethod.Get))
+{ <h4>Add Record</h4>
+      <h5>Name: </h5><input type="text" id="name" name="name" />
+    <br />
+    <h5>Age: </h5><input type="text" id="age" name="age" />
+    <br />
+    <button type="submit" id="Add" name="Add">Submit</button>
+}
+    </div>
+</body>
+</html>

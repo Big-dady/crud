@@ -1,0 +1,25 @@
+﻿@model crud.Models.UpdateModel
+
+@*@{
+    Layout = null;
+}*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div> 
+@using (Html.BeginForm("Upfate", "Home", FormMethod.Post))
+{ 
+        <h4>Edit Record</h4>
+        <h5>id:</h5> <input type="text" readonly="readonly" id="id" name="id" value="@Model.id" />
+        <h5>Name:</h5> <input type="text" id="name" name="name" value="@Model.name" />
+        <h5>Age:</h5> <input type="text" id="age" name="age" value="@Model.age" />
+        <button type="submit" id="Edit" name="Edit">Update</button>
+}</div>
+</body>
+</html>
